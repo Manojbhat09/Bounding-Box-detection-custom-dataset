@@ -1,0 +1,2 @@
+/home/ubuntu/robo/yolov3/data/valves_images/valve_frame0120.jpg
+/home/ubuntu/robo/yolov3/data/valves_images/valve_frame0220.jpg
