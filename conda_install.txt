@@ -1,1 +1,3 @@
 conda install pytorch torchvision cudatoolkit=10 -c pytorch
+conda install -c conda-forge onnx
+pip install onnxruntime

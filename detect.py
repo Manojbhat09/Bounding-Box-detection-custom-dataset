@@ -13,6 +13,7 @@ def detect(save_img=False):
 
     # Initialize
     device = torch_utils.select_device(device='cpu' if ONNX_EXPORT else opt.device)
+#     device = torch_utils.select_device(device='cuda' if ONNX_EXPORT else opt.device)
     if os.path.exists(out):
         shutil.rmtree(out)  # delete output folder
     os.makedirs(out)  # make new output folder
@@ -42,7 +43,11 @@ def detect(save_img=False):
 
     # Export mode
     if ONNX_EXPORT:
+        model.cuda()
         model.fuse()
+        import pdb;pdb.set_trace()
+#         last_layer = network.get_layer(model.num_layers - 1)
+#         network.mark_output(last_layer.get_output(0))
         img = torch.zeros((1, 3) + img_size)  # (1, 3, 320, 192)
         f = opt.weights.replace(opt.weights.split('.')[-1], 'onnx')  # *.onnx filename
         torch.onnx.export(model, img, f, verbose=False, opset_version=11)
