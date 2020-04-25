@@ -2,7 +2,7 @@ from utils.google_utils import *
 from utils.layers import *
 from utils.parse_config import *
 
-ONNX_EXPORT = False
+ONNX_EXPORT = False 
 
 
 def create_modules(module_defs, img_size):

@@ -1,5 +1,10 @@
+if ! [ -x "$(command -v ffmpeg)"]; then
+    echo "ffmpeg not installed, trying to install "
+    
+fi
+
 #For mpeg from jpeg
-cd output-train/
+cd output-breaker-images/
 #mencoder "mf://*.jpg" -mf type=jpg:fps=15 -o output.mpg -speed 1 -ofps 30 -ovc lavc -lavcopts vcodec=mpeg2video:vbitrate=2500 -oac copy -of mpeg
 
 #For mp4 rom jpg
