@@ -4,3 +4,6 @@ Valve detection for real time data (Custom dataset) using and Deep Learning appr
 <p align="center">
   <img src="media/det_output.gif">
 </p>
+
+Find more about our work here:
+https://bit.ly/3fI0oPE
